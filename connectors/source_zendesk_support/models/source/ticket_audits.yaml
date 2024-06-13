@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: ticket_audits
+        columns:
+          - name: events
+            description: List of events related to the ticket audit
+          - name: author_id
+            description: ID of the author of the ticket audit
+          - name: metadata
+            description: Metadata associated with the ticket audit
+          - name: id
+            description: Unique identifier for the ticket audit
+          - name: created_at
+            description: Date and time when the ticket audit was created
+          - name: ticket_id
+            description: ID of the ticket associated with the audit
+          - name: via
+            description: Details of the channel via which the audit occurred
+          - name: attachments
+            description: Attachments associated with the ticket audit

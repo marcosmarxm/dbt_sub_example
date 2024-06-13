@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: organization_member
+    description: >
+      Tickets are the means through which your end users (customers) communicate with agents in Zendesk Support. Tickets can
+      originate from a number of channels, including email, Help Center, chat, phone call, Twitter, Facebook, or the API.
+    columns:
+      - name: id
+        description: Automatically assigned when the ticket is created
+      - name: url
+        description: Hello
+      - name: organization_id
+        description: Hello
+      - name: user_id
+        description: Hello

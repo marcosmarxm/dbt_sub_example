@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: satisfaction_ratings
+        columns:
+          - name: id
+            description: The unique identifier of the satisfaction rating entry.
+          - name: assignee_id
+            description: The unique identifier of the user assigned to the ticket.
+          - name: group_id
+            description: The unique identifier of the group associated with the ticket.
+          - name: reason_id
+            description: The unique identifier of the selected satisfaction rating reason.
+          - name: requester_id
+            description: The unique identifier of the requester who provided the rating.
+          - name: ticket_id
+            description: The unique identifier of the ticket associated with the satisfaction rating.
+          - name: updated_at
+            description: The date and time when the satisfaction rating was last updated.
+          - name: created_at
+            description: The date and time when the satisfaction rating was created.
+          - name: url
+            description: The URL to access the details of the satisfaction rating.
+          - name: score
+            description: The satisfaction score given by the requester (usually a numeric value).
+          - name: reason
+            description: The reason selected by the requester for the satisfaction rating.
+          - name: comment
+            description: The feedback comment provided by the requester.

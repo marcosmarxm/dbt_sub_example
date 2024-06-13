@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: ticket_forms
+        columns:
+          - name: agent_conditions
+            description: Conditions that restrict when the ticket form is available to agents.
+          - name: end_user_conditions
+            description: Conditions that restrict when the ticket form is available to end users.
+          - name: created_at
+            description: The date and time when the ticket form was created.
+          - name: name
+            description: The name of the ticket form.
+          - name: display_name
+            description: The display name of the ticket form.
+          - name: raw_display_name
+            description: The raw display name of the ticket form.
+          - name: position
+            description: The order position of the ticket form within a list.
+          - name: raw_name
+            description: The raw name of the ticket form.
+          - name: updated_at
+            description: The date and time when the ticket form was last updated.
+          - name: active
+            description: Indicates if the ticket form is currently active.
+          - name: default
+            description: Indicates if the ticket form is the default form.
+          - name: in_all_brands
+            description: Indicates if the ticket form is available in all brands.
+          - name: end_user_visible
+            description: Indicates if the ticket form is visible to end users.
+          - name: url
+            description: The URL to access the ticket form.
+          - name: id
+            description: Unique identifier for the ticket form.
+          - name: restricted_brand_ids
+            description: An array of brand IDs under which the ticket form is restricted to be used.
+          - name: ticket_field_ids
+            description: An array of ticket field IDs that are associated with the ticket form.

@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: macros
+        columns:
+          - name: id
+            description: Unique identifier for the macro
+          - name: position
+            description: The position/order of the macro
+          - name: restriction
+            description: Restrictions applied to the macro.
+          - name: title
+            description: The title of the macro
+          - name: created_at
+            description: The date and time when the macro was created
+          - name: url
+            description: URL to access the macro details
+          - name: description
+            description: Additional information or notes about the macro
+          - name: default
+            description: Indicates if the macro is set as the default
+          - name: updated_at
+            description: The date and time when the macro was last updated
+          - name: active
+            description: Indicates if the macro is currently active
+          - name: raw_title
+            description: The title of the macro in its raw form
+          - name: actions
+            description: List of actions defined within the macro.

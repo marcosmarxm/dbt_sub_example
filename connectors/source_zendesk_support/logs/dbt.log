@@ -1,0 +1,741 @@
+
+
+============================== 10:33:13.675266 | 2429694a-641f-4161-9e7c-5f553c836ccd ==============================
+[0m10:33:13.675266 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:33:13.681113 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/marcosmarx/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:33:13.682053 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:33:13.691367 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_wall_clock_time": 0.11883196, "process_user_time": 2.474485, "process_kernel_time": 0.220297, "process_mem_max_rss": "98226176", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:33:13.692557 [debug] [MainThread]: Command `dbt docs generate` failed at 10:33:13.692311 after 0.12 seconds
+[0m10:33:13.693221 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:33:52.902793 | c77c2651-2feb-46ac-88a9-a03ef044af25 ==============================
+[0m10:33:52.902793 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:33:52.908696 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/marcosmarx/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'False'}
+[0m10:33:54.147228 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m10:33:54.180659 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m10:33:54.182337 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:33:54.192338 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading source_zendesk_support_erd: source/ticket_audits.yaml - Runtime Error
+    Syntax error near line 5
+    ------------------------------
+    2  | 
+    3  | sources:
+    4  |   - name: zendesk-support
+    5  |     schema: {{ var('schema') }}
+    6  |     database: {{ var('database') }}
+    7  |     loader: airbyte
+    8  |     loaded_at_field: _airbyte_extracted_at
+    
+    Raw Error:
+    ------------------------------
+    while constructing a mapping
+      in "<unicode string>", line 5, column 13
+    found unhashable key
+      in "<unicode string>", line 5, column 14
+[0m10:33:54.195367 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_wall_clock_time": 1.4009247, "process_user_time": 3.300256, "process_kernel_time": 0.321552, "process_mem_max_rss": "104910848", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:33:54.196650 [debug] [MainThread]: Command `dbt docs generate` failed at 10:33:54.196368 after 1.40 seconds
+[0m10:33:54.197473 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:34:38.051900 | 9ab0f712-7ad0-40e4-8914-fa89d57c733a ==============================
+[0m10:34:38.051900 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:34:38.057698 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'version_check': 'True', 'profiles_dir': '/Users/marcosmarx/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:34:38.653591 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m10:34:38.678208 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m10:34:38.679797 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:34:38.688504 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading source_zendesk_support_erd: source/ticket_audits.yaml - Runtime Error
+    Syntax error near line 5
+    ------------------------------
+    2  | 
+    3  | sources:
+    4  |   - name: zendesk-support
+    5  |     schema: {{ var('schema', target.schema) }}
+    6  |     database: {{ var('database', target.database) }}
+    7  |     loader: airbyte
+    8  |     loaded_at_field: _airbyte_extracted_at
+    
+    Raw Error:
+    ------------------------------
+    while constructing a mapping
+      in "<unicode string>", line 5, column 13
+    found unhashable key
+      in "<unicode string>", line 5, column 14
+[0m10:34:38.691254 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_wall_clock_time": 0.7476468, "process_user_time": 3.29325, "process_kernel_time": 0.29284, "process_mem_max_rss": "104914944", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:34:38.693197 [debug] [MainThread]: Command `dbt docs generate` failed at 10:34:38.692532 after 0.75 seconds
+[0m10:34:38.694467 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:35:49.819583 | 602d53e6-74a7-40d3-9d37-cc4fa802e64a ==============================
+[0m10:35:49.819583 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:35:49.825862 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/marcosmarx/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m10:35:50.423166 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m10:35:50.449934 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m10:35:50.451501 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:35:50.461421 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading source_zendesk_support_erd: source/ticket_audits.yaml - Runtime Error
+    Syntax error near line 5
+    ------------------------------
+    2  | 
+    3  | sources:
+    4  |   - name: zendesk-support
+    5  |     schema: {{ vars('schema', target.schema) }}
+    6  |     database: {{ vars('database', target.database) }}
+    7  |     loader: airbyte
+    8  |     loaded_at_field: _airbyte_extracted_at
+    
+    Raw Error:
+    ------------------------------
+    while constructing a mapping
+      in "<unicode string>", line 5, column 13
+    found unhashable key
+      in "<unicode string>", line 5, column 14
+[0m10:35:50.465010 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_wall_clock_time": 0.75350916, "process_user_time": 3.367502, "process_kernel_time": 0.316427, "process_mem_max_rss": "105320448", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:35:50.466344 [debug] [MainThread]: Command `dbt docs generate` failed at 10:35:50.466058 after 0.76 seconds
+[0m10:35:50.467162 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:37:39.946466 | edd74ac9-33f9-434f-a69f-6d04218b47d4 ==============================
+[0m10:37:39.946466 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:37:39.952409 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/marcosmarx/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'False'}
+[0m10:37:40.543927 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m10:37:40.571291 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m10:37:40.572861 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:37:42.063075 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.source_zendesk_support_erd
+- models.source_zendesk_support_erd.staging
+[0m10:37:42.079885 [info ] [MainThread]: Found 32 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:37:42.082767 [info ] [MainThread]: 
+[0m10:37:42.083488 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m10:37:42.084417 [debug] [MainThread]: Command end result
+[0m10:37:42.108471 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m10:37:42.109116 [info ] [MainThread]: Building catalog
+[0m10:37:42.121690 [debug] [ThreadPool]: Acquiring new postgres connection 'postgres.information_schema'
+[0m10:37:42.140566 [debug] [ThreadPool]: Using postgres connection "postgres.information_schema"
+[0m10:37:42.141273 [debug] [ThreadPool]: On postgres.information_schema: BEGIN
+[0m10:37:42.141864 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:37:42.194919 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:37:42.195652 [debug] [ThreadPool]: Using postgres connection "postgres.information_schema"
+[0m10:37:42.196502 [debug] [ThreadPool]: On postgres.information_schema: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "airbyte", "target_name": "postgres", "connection_name": "postgres.information_schema"} */
+
+    
+    
+
+    select
+        'postgres' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('article_comments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('audit_logs')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('deleted_tickets')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('articles')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_metrics')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_comments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_activities')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organization_fields')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('schedules')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('votes')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('post_comments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('users')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_metric_events')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('tags')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_forms')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('macros')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('brands')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('satisfaction_ratings')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('account_attributes')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('sla_policies')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_audits')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organization_memberships')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('attribute_definitions')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('topics')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organizations')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('user_fields')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('groups')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('posts')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_fields')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('group_memberships')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_skips')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('custom_roles')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m10:37:42.202783 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:37:42.205742 [debug] [ThreadPool]: On postgres.information_schema: ROLLBACK
+[0m10:37:42.206901 [debug] [ThreadPool]: On postgres.information_schema: Close
+[0m10:37:42.222024 [info ] [MainThread]: Catalog written to /Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/target/catalog.json
+[0m10:37:42.224088 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 2.391698, "process_user_time": 4.83195, "process_kernel_time": 0.373057, "process_mem_max_rss": "118632448", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:37:42.225094 [debug] [MainThread]: Command `dbt docs generate` succeeded at 10:37:42.224861 after 2.39 seconds
+[0m10:37:42.225721 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m10:37:42.226285 [debug] [MainThread]: Connection 'postgres.information_schema' was properly closed.
+[0m10:37:42.226876 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:37:51.246942 | 8454c47c-14c1-4854-ae18-1a5c83fcfcc6 ==============================
+[0m10:37:51.246942 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:37:51.252862 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'profiles_dir': '/Users/marcosmarx/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs serve', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:39:21.482697 [error] [MainThread]: Encountered an error:
+
+[0m10:39:21.490441 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 169, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 245, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/main.py", line 324, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m10:39:21.493857 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_wall_clock_time": 90.37313, "process_user_time": 3.337084, "process_kernel_time": 0.30192, "process_mem_max_rss": "106094592", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:39:21.495304 [debug] [MainThread]: Command `dbt docs serve` failed at 10:39:21.495011 after 90.37 seconds
+[0m10:39:21.496391 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:39:26.718597 | 59ac45d4-d0ab-4764-9391-165f068ebc5b ==============================
+[0m10:39:26.718597 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:39:26.724202 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'profiles_dir': '/Users/marcosmarx/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt docs generate', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:39:27.324310 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m10:39:27.350682 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m10:39:27.436304 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 6 files added, 0 files changed.
+[0m10:39:27.437251 [debug] [MainThread]: Partial parsing: added file: source_zendesk_support_erd://models/erd/organization.sql
+[0m10:39:27.437999 [debug] [MainThread]: Partial parsing: added file: source_zendesk_support_erd://models/erd/organization.yml
+[0m10:39:27.438660 [debug] [MainThread]: Partial parsing: added file: source_zendesk_support_erd://models/erd/user.sql
+[0m10:39:27.439353 [debug] [MainThread]: Partial parsing: added file: source_zendesk_support_erd://models/erd/user.yml
+[0m10:39:27.439968 [debug] [MainThread]: Partial parsing: added file: source_zendesk_support_erd://models/erd/organization_member.sql
+[0m10:39:27.440623 [debug] [MainThread]: Partial parsing: added file: source_zendesk_support_erd://models/erd/organization_member.yml
+[0m10:39:28.159186 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.source_zendesk_support_erd.staging
+[0m10:39:28.175383 [info ] [MainThread]: Found 3 models, 7 tests, 32 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:39:28.179078 [info ] [MainThread]: 
+[0m10:39:28.180951 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:39:28.182861 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m10:39:28.197433 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m10:39:28.198238 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m10:39:28.199112 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:39:28.235804 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:39:28.236503 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m10:39:28.237107 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "airbyte", "target_name": "postgres", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:39:28.241650 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:39:28.243500 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m10:39:28.244606 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m10:39:28.251297 [debug] [MainThread]: Using postgres connection "master"
+[0m10:39:28.251944 [debug] [MainThread]: On master: BEGIN
+[0m10:39:28.252485 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:39:28.268105 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:39:28.268777 [debug] [MainThread]: Using postgres connection "master"
+[0m10:39:28.269453 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "airbyte", "target_name": "postgres", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:39:28.324541 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:39:28.326542 [debug] [MainThread]: On master: ROLLBACK
+[0m10:39:28.328391 [debug] [MainThread]: On master: Close
+[0m10:39:28.329516 [info ] [MainThread]: Concurrency: 8 threads (target='postgres')
+[0m10:39:28.330160 [info ] [MainThread]: 
+[0m10:39:28.334914 [debug] [Thread-1 (]: Began running node model.source_zendesk_support_erd.organization
+[0m10:39:28.335822 [debug] [Thread-2 (]: Began running node model.source_zendesk_support_erd.organization_member
+[0m10:39:28.336741 [debug] [Thread-3 (]: Began running node model.source_zendesk_support_erd.user
+[0m10:39:28.337946 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.source_zendesk_support_erd.organization)
+[0m10:39:28.339147 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.source_zendesk_support_erd.organization_member'
+[0m10:39:28.340736 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.source_zendesk_support_erd.user'
+[0m10:39:28.341644 [debug] [Thread-1 (]: Began compiling node model.source_zendesk_support_erd.organization
+[0m10:39:28.342786 [debug] [Thread-2 (]: Began compiling node model.source_zendesk_support_erd.organization_member
+[0m10:39:28.343477 [debug] [Thread-3 (]: Began compiling node model.source_zendesk_support_erd.user
+[0m10:39:28.356007 [debug] [Thread-1 (]: Writing injected SQL for node "model.source_zendesk_support_erd.organization"
+[0m10:39:28.359614 [debug] [Thread-2 (]: Writing injected SQL for node "model.source_zendesk_support_erd.organization_member"
+[0m10:39:28.364037 [debug] [Thread-3 (]: Writing injected SQL for node "model.source_zendesk_support_erd.user"
+[0m10:39:28.366060 [debug] [Thread-3 (]: Timing info for model.source_zendesk_support_erd.user (compile): 10:39:28.360092 => 10:39:28.365660
+[0m10:39:28.366833 [debug] [Thread-2 (]: Timing info for model.source_zendesk_support_erd.organization_member (compile): 10:39:28.356507 => 10:39:28.366443
+[0m10:39:28.367649 [debug] [Thread-1 (]: Timing info for model.source_zendesk_support_erd.organization (compile): 10:39:28.343985 => 10:39:28.367269
+[0m10:39:28.368260 [debug] [Thread-3 (]: Began executing node model.source_zendesk_support_erd.user
+[0m10:39:28.368919 [debug] [Thread-2 (]: Began executing node model.source_zendesk_support_erd.organization_member
+[0m10:39:28.369591 [debug] [Thread-1 (]: Began executing node model.source_zendesk_support_erd.organization
+[0m10:39:28.370453 [debug] [Thread-3 (]: Timing info for model.source_zendesk_support_erd.user (execute): 10:39:28.370061 => 10:39:28.370084
+[0m10:39:28.371255 [debug] [Thread-2 (]: Timing info for model.source_zendesk_support_erd.organization_member (execute): 10:39:28.370886 => 10:39:28.370897
+[0m10:39:28.372013 [debug] [Thread-1 (]: Timing info for model.source_zendesk_support_erd.organization (execute): 10:39:28.371672 => 10:39:28.371681
+[0m10:39:28.373372 [debug] [Thread-3 (]: Finished running node model.source_zendesk_support_erd.user
+[0m10:39:28.374677 [debug] [Thread-2 (]: Finished running node model.source_zendesk_support_erd.organization_member
+[0m10:39:28.376096 [debug] [Thread-1 (]: Finished running node model.source_zendesk_support_erd.organization
+[0m10:39:28.377485 [debug] [Thread-1 (]: Began running node test.source_zendesk_support_erd.dbt_constraints_primary_key_user_id.322ea17854
+[0m10:39:28.378295 [debug] [Thread-5 (]: Began running node test.source_zendesk_support_erd.dbt_constraints_unique_key_user_id.11eef3c3a2
+[0m10:39:28.379399 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.source_zendesk_support_erd.organization, now test.source_zendesk_support_erd.dbt_constraints_primary_key_user_id.322ea17854)
+[0m10:39:28.380217 [debug] [Thread-6 (]: Began running node test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_user_id__id__ref_user_.0c9ae42f89
+[0m10:39:28.380925 [debug] [Thread-7 (]: Began running node test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_organization_id__id__ref_organization_.44598e906a
+[0m10:39:28.381652 [debug] [Thread-8 (]: Began running node test.source_zendesk_support_erd.dbt_constraints_foreign_key_user_organization_id__id__ref_organization_.0474e952ee
+[0m10:39:28.382702 [debug] [Thread-5 (]: Acquiring new postgres connection 'test.source_zendesk_support_erd.dbt_constraints_unique_key_user_id.11eef3c3a2'
+[0m10:39:28.383338 [debug] [Thread-4 (]: Began running node test.source_zendesk_support_erd.dbt_constraints_primary_key_organization_id.ea1cacbdce
+[0m10:39:28.383976 [debug] [Thread-3 (]: Began running node test.source_zendesk_support_erd.dbt_constraints_unique_key_organization_id.f5abebe122
+[0m10:39:28.384660 [debug] [Thread-1 (]: Began compiling node test.source_zendesk_support_erd.dbt_constraints_primary_key_user_id.322ea17854
+[0m10:39:28.385747 [debug] [Thread-6 (]: Acquiring new postgres connection 'test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_user_id__id__ref_user_.0c9ae42f89'
+[0m10:39:28.386806 [debug] [Thread-7 (]: Acquiring new postgres connection 'test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_organization_id__id__ref_organization_.44598e906a'
+[0m10:39:28.388185 [debug] [Thread-8 (]: Acquiring new postgres connection 'test.source_zendesk_support_erd.dbt_constraints_foreign_key_user_organization_id__id__ref_organization_.0474e952ee'
+[0m10:39:28.388862 [debug] [Thread-5 (]: Began compiling node test.source_zendesk_support_erd.dbt_constraints_unique_key_user_id.11eef3c3a2
+[0m10:39:28.390070 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.source_zendesk_support_erd.dbt_constraints_primary_key_organization_id.ea1cacbdce'
+[0m10:39:28.391067 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.source_zendesk_support_erd.user, now test.source_zendesk_support_erd.dbt_constraints_unique_key_organization_id.f5abebe122)
+[0m10:39:28.396990 [debug] [Thread-6 (]: Began compiling node test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_user_id__id__ref_user_.0c9ae42f89
+[0m10:39:28.397725 [debug] [Thread-7 (]: Began compiling node test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_organization_id__id__ref_organization_.44598e906a
+[0m10:39:28.398467 [debug] [Thread-8 (]: Began compiling node test.source_zendesk_support_erd.dbt_constraints_foreign_key_user_organization_id__id__ref_organization_.0474e952ee
+[0m10:39:28.399613 [debug] [Thread-1 (]: Timing info for test.source_zendesk_support_erd.dbt_constraints_primary_key_user_id.322ea17854 (compile): 10:39:28.391545 => 10:39:28.399250
+[0m10:39:28.405082 [debug] [Thread-5 (]: Timing info for test.source_zendesk_support_erd.dbt_constraints_unique_key_user_id.11eef3c3a2 (compile): 10:39:28.400011 => 10:39:28.404708
+[0m10:39:28.405735 [debug] [Thread-4 (]: Began compiling node test.source_zendesk_support_erd.dbt_constraints_primary_key_organization_id.ea1cacbdce
+[0m10:39:28.406398 [debug] [Thread-3 (]: Began compiling node test.source_zendesk_support_erd.dbt_constraints_unique_key_organization_id.f5abebe122
+[0m10:39:28.413296 [debug] [Thread-6 (]: Timing info for test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_user_id__id__ref_user_.0c9ae42f89 (compile): 10:39:28.406882 => 10:39:28.412918
+[0m10:39:28.421549 [debug] [Thread-7 (]: Timing info for test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_organization_id__id__ref_organization_.44598e906a (compile): 10:39:28.413760 => 10:39:28.421145
+[0m10:39:28.428400 [debug] [Thread-8 (]: Timing info for test.source_zendesk_support_erd.dbt_constraints_foreign_key_user_organization_id__id__ref_organization_.0474e952ee (compile): 10:39:28.422015 => 10:39:28.428001
+[0m10:39:28.435664 [debug] [Thread-4 (]: Timing info for test.source_zendesk_support_erd.dbt_constraints_primary_key_organization_id.ea1cacbdce (compile): 10:39:28.430551 => 10:39:28.435282
+[0m10:39:28.441581 [debug] [Thread-3 (]: Timing info for test.source_zendesk_support_erd.dbt_constraints_unique_key_organization_id.f5abebe122 (compile): 10:39:28.436632 => 10:39:28.441212
+[0m10:39:28.455731 [debug] [Thread-1 (]: Compilation Error in test dbt_constraints_primary_key_user_id (models/erd/user.yml)
+  'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.457149 [debug] [Thread-8 (]: Compilation Error in test dbt_constraints_foreign_key_user_organization_id__id__ref_organization_ (models/erd/user.yml)
+  'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.458824 [debug] [Thread-4 (]: Compilation Error in test dbt_constraints_primary_key_organization_id (models/erd/organization.yml)
+  'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.460247 [debug] [Thread-5 (]: Compilation Error in test dbt_constraints_unique_key_user_id (models/erd/user.yml)
+  'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.461208 [debug] [Thread-1 (]: Finished running node test.source_zendesk_support_erd.dbt_constraints_primary_key_user_id.322ea17854
+[0m10:39:28.462547 [debug] [Thread-7 (]: Compilation Error in test dbt_constraints_foreign_key_organization_member_organization_id__id__ref_organization_ (models/erd/organization_member.yml)
+  'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.463902 [debug] [Thread-6 (]: Compilation Error in test dbt_constraints_foreign_key_organization_member_user_id__id__ref_user_ (models/erd/organization_member.yml)
+  'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.465292 [debug] [Thread-3 (]: Compilation Error in test dbt_constraints_unique_key_organization_id (models/erd/organization.yml)
+  'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.466147 [debug] [Thread-8 (]: Finished running node test.source_zendesk_support_erd.dbt_constraints_foreign_key_user_organization_id__id__ref_organization_.0474e952ee
+[0m10:39:28.467035 [debug] [Thread-4 (]: Finished running node test.source_zendesk_support_erd.dbt_constraints_primary_key_organization_id.ea1cacbdce
+[0m10:39:28.467897 [debug] [Thread-5 (]: Finished running node test.source_zendesk_support_erd.dbt_constraints_unique_key_user_id.11eef3c3a2
+[0m10:39:28.469763 [debug] [Thread-7 (]: Finished running node test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_organization_id__id__ref_organization_.44598e906a
+[0m10:39:28.470628 [debug] [Thread-6 (]: Finished running node test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_user_id__id__ref_user_.0c9ae42f89
+[0m10:39:28.471477 [debug] [Thread-3 (]: Finished running node test.source_zendesk_support_erd.dbt_constraints_unique_key_organization_id.f5abebe122
+[0m10:39:28.473538 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:39:28.474206 [debug] [MainThread]: Connection 'test.source_zendesk_support_erd.dbt_constraints_primary_key_user_id.322ea17854' was properly closed.
+[0m10:39:28.474856 [debug] [MainThread]: Connection 'model.source_zendesk_support_erd.organization_member' was properly closed.
+[0m10:39:28.475484 [debug] [MainThread]: Connection 'test.source_zendesk_support_erd.dbt_constraints_unique_key_organization_id.f5abebe122' was properly closed.
+[0m10:39:28.476030 [debug] [MainThread]: Connection 'test.source_zendesk_support_erd.dbt_constraints_unique_key_user_id.11eef3c3a2' was properly closed.
+[0m10:39:28.476568 [debug] [MainThread]: Connection 'test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_user_id__id__ref_user_.0c9ae42f89' was properly closed.
+[0m10:39:28.477106 [debug] [MainThread]: Connection 'test.source_zendesk_support_erd.dbt_constraints_foreign_key_organization_member_organization_id__id__ref_organization_.44598e906a' was properly closed.
+[0m10:39:28.477672 [debug] [MainThread]: Connection 'test.source_zendesk_support_erd.dbt_constraints_foreign_key_user_organization_id__id__ref_organization_.0474e952ee' was properly closed.
+[0m10:39:28.478213 [debug] [MainThread]: Connection 'test.source_zendesk_support_erd.dbt_constraints_primary_key_organization_id.ea1cacbdce' was properly closed.
+[0m10:39:28.478972 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Compilation Error in test dbt_constraints_unique_key_organization_id (models/erd/organization.yml)
+    'dbt_constraints' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m10:39:28.480838 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_wall_clock_time": 1.8702459, "process_user_time": 4.211969, "process_kernel_time": 0.395515, "process_mem_max_rss": "122195968", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:39:28.481802 [debug] [MainThread]: Command `dbt docs generate` failed at 10:39:28.481579 after 1.87 seconds
+[0m10:39:28.482436 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:40:17.579665 | e2473b1a-524a-42df-aeb9-53593c6dd1d3 ==============================
+[0m10:40:17.579665 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:40:17.585176 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/marcosmarx/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m10:40:18.146721 [info ] [MainThread]: Registered adapter: postgres=1.7.13
+[0m10:40:18.172185 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m10:40:18.230911 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m10:40:18.232104 [debug] [MainThread]: Partial parsing: updated file: source_zendesk_support_erd://models/erd/user.yml
+[0m10:40:18.232955 [debug] [MainThread]: Partial parsing: updated file: source_zendesk_support_erd://models/erd/organization.yml
+[0m10:40:18.233750 [debug] [MainThread]: Partial parsing: updated file: source_zendesk_support_erd://models/erd/organization_member.yml
+[0m10:40:18.624031 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.source_zendesk_support_erd.staging
+[0m10:40:18.639080 [info ] [MainThread]: Found 3 models, 32 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:40:18.642356 [info ] [MainThread]: 
+[0m10:40:18.643539 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:40:18.645104 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m10:40:18.660748 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m10:40:18.661486 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m10:40:18.662086 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:40:18.696376 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:40:18.697318 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m10:40:18.697917 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "airbyte", "target_name": "postgres", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:40:18.702227 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:40:18.704234 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m10:40:18.705355 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m10:40:18.711661 [debug] [MainThread]: Using postgres connection "master"
+[0m10:40:18.712333 [debug] [MainThread]: On master: BEGIN
+[0m10:40:18.712877 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:40:18.729643 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:40:18.730295 [debug] [MainThread]: Using postgres connection "master"
+[0m10:40:18.730956 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "airbyte", "target_name": "postgres", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:40:18.780842 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:40:18.782662 [debug] [MainThread]: On master: ROLLBACK
+[0m10:40:18.783741 [debug] [MainThread]: On master: Close
+[0m10:40:18.784797 [info ] [MainThread]: Concurrency: 8 threads (target='postgres')
+[0m10:40:18.785406 [info ] [MainThread]: 
+[0m10:40:18.844412 [debug] [Thread-1 (]: Began running node model.source_zendesk_support_erd.organization
+[0m10:40:18.845310 [debug] [Thread-2 (]: Began running node model.source_zendesk_support_erd.organization_member
+[0m10:40:18.846469 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.source_zendesk_support_erd.organization)
+[0m10:40:18.847326 [debug] [Thread-3 (]: Began running node model.source_zendesk_support_erd.user
+[0m10:40:18.848500 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.source_zendesk_support_erd.organization_member'
+[0m10:40:18.849169 [debug] [Thread-1 (]: Began compiling node model.source_zendesk_support_erd.organization
+[0m10:40:18.850268 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.source_zendesk_support_erd.user'
+[0m10:40:18.850928 [debug] [Thread-2 (]: Began compiling node model.source_zendesk_support_erd.organization_member
+[0m10:40:18.860533 [debug] [Thread-1 (]: Writing injected SQL for node "model.source_zendesk_support_erd.organization"
+[0m10:40:18.861219 [debug] [Thread-3 (]: Began compiling node model.source_zendesk_support_erd.user
+[0m10:40:18.864786 [debug] [Thread-2 (]: Writing injected SQL for node "model.source_zendesk_support_erd.organization_member"
+[0m10:40:18.868395 [debug] [Thread-3 (]: Writing injected SQL for node "model.source_zendesk_support_erd.user"
+[0m10:40:18.869823 [debug] [Thread-1 (]: Timing info for model.source_zendesk_support_erd.organization (compile): 10:40:18.851367 => 10:40:18.869380
+[0m10:40:18.870581 [debug] [Thread-2 (]: Timing info for model.source_zendesk_support_erd.organization_member (compile): 10:40:18.861774 => 10:40:18.870215
+[0m10:40:18.871306 [debug] [Thread-1 (]: Began executing node model.source_zendesk_support_erd.organization
+[0m10:40:18.872045 [debug] [Thread-2 (]: Began executing node model.source_zendesk_support_erd.organization_member
+[0m10:40:18.872762 [debug] [Thread-3 (]: Timing info for model.source_zendesk_support_erd.user (compile): 10:40:18.865374 => 10:40:18.872430
+[0m10:40:18.873523 [debug] [Thread-1 (]: Timing info for model.source_zendesk_support_erd.organization (execute): 10:40:18.873171 => 10:40:18.873191
+[0m10:40:18.874265 [debug] [Thread-2 (]: Timing info for model.source_zendesk_support_erd.organization_member (execute): 10:40:18.873927 => 10:40:18.873934
+[0m10:40:18.874906 [debug] [Thread-3 (]: Began executing node model.source_zendesk_support_erd.user
+[0m10:40:18.876361 [debug] [Thread-1 (]: Finished running node model.source_zendesk_support_erd.organization
+[0m10:40:18.877670 [debug] [Thread-2 (]: Finished running node model.source_zendesk_support_erd.organization_member
+[0m10:40:18.878505 [debug] [Thread-3 (]: Timing info for model.source_zendesk_support_erd.user (execute): 10:40:18.878135 => 10:40:18.878145
+[0m10:40:18.880101 [debug] [Thread-3 (]: Finished running node model.source_zendesk_support_erd.user
+[0m10:40:18.881674 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:40:18.882223 [debug] [MainThread]: Connection 'model.source_zendesk_support_erd.organization' was properly closed.
+[0m10:40:18.882755 [debug] [MainThread]: Connection 'model.source_zendesk_support_erd.organization_member' was properly closed.
+[0m10:40:18.883280 [debug] [MainThread]: Connection 'model.source_zendesk_support_erd.user' was properly closed.
+[0m10:40:18.884600 [debug] [MainThread]: Command end result
+[0m10:40:18.903513 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m10:40:18.904076 [info ] [MainThread]: Building catalog
+[0m10:40:18.914306 [debug] [ThreadPool]: Acquiring new postgres connection 'postgres.information_schema'
+[0m10:40:18.925676 [debug] [ThreadPool]: Using postgres connection "postgres.information_schema"
+[0m10:40:18.926395 [debug] [ThreadPool]: On postgres.information_schema: BEGIN
+[0m10:40:18.926969 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:40:18.957495 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:40:18.958180 [debug] [ThreadPool]: Using postgres connection "postgres.information_schema"
+[0m10:40:18.959070 [debug] [ThreadPool]: On postgres.information_schema: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "airbyte", "target_name": "postgres", "connection_name": "postgres.information_schema"} */
+
+    
+    
+
+    select
+        'postgres' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_fields')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organization_memberships')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('sla_policies')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('post_comments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('account_attributes')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_metric_events')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('group_memberships')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_audits')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_skips')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organization_member')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('satisfaction_ratings')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('articles')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organization')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_comments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organizations')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('custom_roles')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('votes')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('schedules')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('user_fields')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('macros')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('article_comments')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('organization_fields')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('audit_logs')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('posts')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('tags')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('topics')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('deleted_tickets')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_activities')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('groups')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('attribute_definitions')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_metrics')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('user')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('users')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ticket_forms')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('brands')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m10:40:18.966687 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:40:18.969372 [debug] [ThreadPool]: On postgres.information_schema: ROLLBACK
+[0m10:40:18.970575 [debug] [ThreadPool]: On postgres.information_schema: Close
+[0m10:40:18.986555 [info ] [MainThread]: Catalog written to /Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/target/catalog.json
+[0m10:40:18.988900 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 1.5108666, "process_user_time": 3.757023, "process_kernel_time": 0.319734, "process_mem_max_rss": "122494976", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:40:18.989874 [debug] [MainThread]: Command `dbt docs generate` succeeded at 10:40:18.989655 after 1.51 seconds
+[0m10:40:18.990616 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m10:40:18.991171 [debug] [MainThread]: Connection 'postgres.information_schema' was properly closed.
+[0m10:40:18.991752 [debug] [MainThread]: Flushing usage events
+
+
+============================== 10:40:28.198249 | 8e9b0f47-ced8-4914-86d4-d0b0d89e763b ==============================
+[0m10:40:28.198249 [info ] [MainThread]: Running with dbt=1.7.13
+[0m10:40:28.203891 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/marcosmarx/Code/airbyte-dbt-models/connectors/source_zendesk_support/logs', 'debug': 'False', 'profiles_dir': '/Users/marcosmarx/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs serve', 'send_anonymous_usage_stats': 'False'}
+[0m10:41:14.919619 [error] [MainThread]: Encountered an error:
+
+[0m10:41:14.927289 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 169, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/requires.py", line 245, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/cli/main.py", line 324, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcosmarx/.pyenv/versions/3.11.6/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m10:41:14.931309 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_wall_clock_time": 46.83521, "process_user_time": 3.090338, "process_kernel_time": 0.268893, "process_mem_max_rss": "105656320", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:41:14.933366 [debug] [MainThread]: Command `dbt docs serve` failed at 10:41:14.932916 after 46.84 seconds
+[0m10:41:14.934271 [debug] [MainThread]: Flushing usage events

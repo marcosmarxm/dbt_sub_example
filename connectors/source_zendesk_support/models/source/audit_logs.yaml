@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: audit_logs
+        columns:
+          - name: action
+            description: The type of action performed in the audit log.
+          - name: action_label
+            description: A human-readable label representing the action.
+          - name: actor_id
+            description: The ID of the actor (user) who performed the action.
+          - name: actor_name
+            description: The name of the actor (user) who performed the action.
+          - name: change_description
+            description: Description of the change made.
+          - name: created_at
+            description: The date and time when the audit log entry was created.
+          - name: id
+            description: Unique identifier for the audit log entry.
+          - name: ip_address
+            description: The IP address from which the action was performed.
+          - name: source_id
+            description: The ID of the source object related to the action.
+          - name: source_label
+            description: A human-readable label representing the source object.
+          - name: source_type
+            description: The type of the source object.
+          - name: url
+            description: The URL associated with the action or source object.

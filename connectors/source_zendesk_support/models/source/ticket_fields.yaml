@@ -1,0 +1,65 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: ticket_fields
+        columns:
+          - name: created_at
+            description: The date and time when the ticket field was created.
+          - name: title_in_portal
+            description: The title of the ticket field visible in the portal.
+          - name: visible_in_portal
+            description: Indicates whether the ticket field is visible in the portal or not.
+          - name: collapsed_for_agents
+            description: Specifies if the ticket field is collapsed for agents.
+          - name: regexp_for_validation
+            description: Regular expression for validation of the ticket field value.
+          - name: title
+            description: The title of the ticket field.
+          - name: position
+            description: Position of the ticket field.
+          - name: type
+            description: Type of the ticket field.
+          - name: editable_in_portal
+            description: Indicates whether the ticket field is editable in the portal or not.
+          - name: raw_title_in_portal
+            description: The raw title of the ticket field visible in the portal.
+          - name: raw_description
+            description: The raw description of the ticket field.
+          - name: custom_field_options
+            description: Options for custom ticket field with properties like default, id, name, raw_name, and value.
+          - name: updated_at
+            description: The date and time when the ticket field was last updated.
+          - name: tag
+            description: Tag associated with the ticket field.
+          - name: removable
+            description: Specifies if the ticket field is removable.
+          - name: active
+            description: Indicates whether the ticket field is active or not.
+          - name: url
+            description: URL of the ticket field.
+          - name: raw_title
+            description: The raw title of the ticket field.
+          - name: required
+            description: Indicates if the ticket field is required.
+          - name: id
+            description: The unique identifier of the ticket field.
+          - name: description
+            description: Description of the ticket field.
+          - name: agent_description
+            description: The description of the ticket field visible to agents.
+          - name: required_in_portal
+            description: Specifies if the ticket field is required in the portal.
+          - name: system_field_options
+            description: Options for the system field associated with the ticket field.
+          - name: custom_statuses
+            description: Custom statuses associated with the ticket field.
+          - name: key
+            description: Key associated with the ticket field.
+          - name: sub_type_id
+            description: The subtype identifier of the ticket field.

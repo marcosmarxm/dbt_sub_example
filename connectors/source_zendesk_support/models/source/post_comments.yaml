@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: post_comments
+        columns:
+          - name: author_id
+            description: The unique identifier of the author of the comment.
+          - name: body
+            description: The content of the comment.
+          - name: created_at
+            description: The timestamp when the comment was created.
+          - name: html_url
+            description: The URL to access the comment in HTML format.
+          - name: id
+            description: The unique identifier of the comment.
+          - name: non_author_editor_id
+            description: The unique identifier of the non-author editor of the comment.
+          - name: non_author_updated_at
+            description: The timestamp when the comment was last updated by a non-author editor.
+          - name: official
+            description: Indicates if the comment is from an official source.
+          - name: post_id
+            description: The unique identifier of the post to which the comment belongs.
+          - name: updated_at
+            description: The timestamp when the comment was last updated.
+          - name: url
+            description: The URL to access the comment.
+          - name: vote_count
+            description: The total count of votes the comment has received.
+          - name: vote_sum
+            description: The sum of all votes (positive and negative) the comment has received.

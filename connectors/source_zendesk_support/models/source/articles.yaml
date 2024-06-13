@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: articles
+        columns:
+          - name: author_id
+            description: The unique identifier of the author who created the article.
+          - name: body
+            description: The main content or body of the article.
+          - name: comments_disabled
+            description: Indicates whether comments are disabled for the article.
+          - name: content_tag_ids
+            description: An array of unique identifiers of content tags associated with the article.
+          - name: created_at
+            description: The date and time when the article was created.
+          - name: draft
+            description: Indicates whether the article is in draft mode.
+          - name: edited_at
+            description: The date and time when the article was last edited.
+          - name: html_url
+            description: The URL of the article in HTML format.
+          - name: id
+            description: The unique identifier of the article.
+          - name: label_names
+            description: An array of label names associated with the article.
+          - name: locale
+            description: The language locale of the article.
+          - name: name
+            description: The name of the article.
+          - name: outdated
+            description: Indicates whether the article is outdated.
+          - name: outdated_locales
+            description: An array of language locales in which the article is outdated.
+          - name: permission_group_id
+            description: The unique identifier of the permission group for the article.
+          - name: position
+            description: The position order of the article within its section.
+          - name: promoted
+            description: Indicates whether the article is promoted.
+          - name: section_id
+            description: The unique identifier of the section to which the article belongs.
+          - name: source_locale
+            description: The original language locale of the article.
+          - name: title
+            description: The title or heading of the article.
+          - name: updated_at
+            description: The date and time when the article was last updated.
+          - name: url
+            description: The URL of the article.
+          - name: user_segment_id
+            description: The unique identifier of the user segment targeted by the article.
+          - name: vote_count
+            description: The total count of votes received for the article.
+          - name: vote_sum
+            description: The sum of votes received for the article (considering upvotes and downvotes).

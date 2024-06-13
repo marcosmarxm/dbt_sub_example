@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: groups
+        columns:
+          - name: name
+            description: The name of the group.
+          - name: created_at
+            description: The date and time when the group was created.
+          - name: url
+            description: The URL of the group.
+          - name: updated_at
+            description: The date and time when the group was last updated.
+          - name: default
+            description: Indicates if the group is set as the default group.
+          - name: deleted
+            description: Indicates if the group has been deleted.
+          - name: description
+            description: The description or details about the group.
+          - name: id
+            description: The unique identifier of the group.
+          - name: is_public
+            description: Indicates whether the group is public or private.

@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: account_attributes
+        columns:
+          - name: id
+            description: The unique identifier for the account attribute.
+          - name: name
+            description: The name or label of the account attribute.
+          - name: created_at
+            description: The timestamp indicating when the account attribute was created.
+          - name: updated_at
+            description: The timestamp indicating when the account attribute was last updated.
+          - name: url
+            description: The URL that can be used to access the account attribute.

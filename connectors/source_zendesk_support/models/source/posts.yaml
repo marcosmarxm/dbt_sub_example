@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: posts
+        columns:
+          - name: author_id
+            description: The unique identifier of the author of the post.
+          - name: closed
+            description: Indicates whether the post is closed or open for further comments.
+          - name: comment_count
+            description: The total number of comments on the post.
+          - name: content_tag_ids
+            description: Array containing unique identifiers of tags associated with the post.
+          - name: details
+            description: Additional details or content of the post.
+          - name: featured
+            description: Indicates whether the post is featured or not.
+          - name: follower_count
+            description: The number of users following the post for updates.
+          - name: frozen
+            description: Indicates whether the post content is frozen or editable.
+          - name: html_url
+            description: The URL that directs to the HTML version of the post.
+          - name: id
+            description: The unique identifier of the post.
+          - name: non_author_editor_id
+            description: The unique identifier of a user who is not the author but edited the post.
+          - name: non_author_updated_at
+            description: The date and time when a non-author user last updated the post.
+          - name: pinned
+            description: Indicates if the post is pinned to stay on top of the list.
+          - name: status
+            description: The current status of the post, such as 'open', 'solved', 'archived', etc.
+          - name: title
+            description: The title or headline of the post.
+          - name: topic_id
+            description: The identifier of the topic under which the post belongs.
+          - name: vote_count
+            description: The total count of votes the post has received.
+          - name: vote_sum
+            description: The sum of all votes received considering both upvotes and downvotes.
+          - name: created_at
+            description: The date and time when the post was created.
+          - name: url
+            description: The URL that points to the post details.
+          - name: description
+            description: A brief summary or overview of the post content.
+          - name: updated_at
+            description: The date and time of the last update made to the post.

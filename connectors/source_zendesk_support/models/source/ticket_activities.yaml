@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: zendesk-support
+    schema: '{{ var(''target_schema'', target.schema) }}'
+    database: '{{ var(''target_database'', target.database) }}'
+    loader: airbyte
+    loaded_at_field: _airbyte_extracted_at
+    tables:
+      - name: ticket_activities
+        columns:
+          - name: actor
+            description: The full user record of the user responsible for the ticket activity. See Users
+          - name: actor_id
+            description: The id of the user responsible for the ticket activity. An actor_id of -1 is a Zendesk system user, such as an automations action.
+          - name: created_at
+            description: When the record was created
+          - name: description
+            description: Description of the activity
+          - name: id
+            description: Automatically assigned on creation
+          - name: object
+            description: The content of the activity. Can be a ticket, comment, or change.
+          - name: target
+            description: The target of the activity, a ticket.
+          - name: title
+            description: Description of the activity
+          - name: updated_at
+            description: When the record was last updated
+          - name: url
+            description: The API url of the activity
+          - name: user
+            description: The full user record of the agent making the request. See Users
+          - name: user_id
+            description: The id of the agent making the request
+          - name: verb
+            description: The type of activity. Can be tickets.assignment, tickets.comment, or tickets.priority_increase
