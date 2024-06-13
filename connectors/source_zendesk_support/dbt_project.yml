@@ -11,6 +11,7 @@ model-paths:
 
 macro-paths:
   - macros
+  - global_macros
 
 target-path: target
 
@@ -20,7 +21,7 @@ clean-targets:
   - logs
 
 require-dbt-version:
-  - '>=1.0.0'
+  - ">=1.0.0"
   - <2.0.0
 
 models:
@@ -30,5 +31,7 @@ models:
       materialized: view
 
 vars:
+  using_erd: true
+  prefix: ""
   database: postgres
   schema: source_zendesk_support

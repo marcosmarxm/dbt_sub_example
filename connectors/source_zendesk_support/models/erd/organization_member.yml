@@ -2,6 +2,8 @@ version: 2
 
 models:
   - name: organization_member
+    config:
+      enabled: "{{ var('using_erd', true) }}"
     description: >
       Tickets are the means through which your end users (customers) communicate with agents in Zendesk Support. Tickets can
       originate from a number of channels, including email, Help Center, chat, phone call, Twitter, Facebook, or the API.
