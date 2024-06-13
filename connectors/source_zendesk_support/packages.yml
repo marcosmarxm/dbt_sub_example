@@ -1,4 +1,3 @@
 packages:
-  - git: "https://github.com/marcosmarxm/dbt_sub_example" # git URL
-name of subdirectory containing `dbt_project.yml`
+  - git: "https://github.com/marcosmarxm/dbt_sub_example" # git UR
     revision: main
