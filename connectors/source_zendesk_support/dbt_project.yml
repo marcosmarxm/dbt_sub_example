@@ -6,6 +6,8 @@ version: 0.1.0
 
 profile: airbyte
 
+packages-install-path: ../macros
+
 model-paths:
   - models
 
@@ -32,6 +34,6 @@ models:
 
 vars:
   using_erd: true
-  prefix: ""
+  table_prefix: ""
   database: postgres
   schema: source_zendesk_support
