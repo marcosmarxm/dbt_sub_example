@@ -1,3 +1,0 @@
-packages:
-  - git: "https://github.com/marcosmarxm/dbt_sub_example" # git UR
-    revision: main

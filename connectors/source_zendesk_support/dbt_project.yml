@@ -6,14 +6,12 @@ version: 0.1.0
 
 profile: airbyte
 
-packages-install-path: ../macros
-
 model-paths:
   - models
 
 macro-paths:
   - macros
-  - global_macros
+  - ../global_macros
 
 target-path: target
 
